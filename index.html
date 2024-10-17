@@ -31,7 +31,7 @@
     <div id="startScreen">
         <h1>Space Invaders</h1>
         <p>Press SPACE to start/restart</p>
-        <p>Use WASD to move, J to shoot</p>
+        <p>Use A and D to move, J to shoot</p>
         <p>Back two rows require 3 hits!</p>
     </div>
 
@@ -45,7 +45,7 @@
         let gameOver = true;
         let playerWon = false;
         let lastShootTime = 0;
-        const shootDelay = 500; // 0.5 seconds in milliseconds
+        const shootDelay = 300; // 0.3 seconds in milliseconds
 
         class GameObject {
             constructor(x, y, width, height, color) {
@@ -73,10 +73,6 @@
                     this.x -= this.speed;
                 } else if (direction === 'right' && this.x < canvas.width - this.width) {
                     this.x += this.speed;
-                } else if (direction === 'up' && this.y > canvas.height / 2) {
-                    this.y -= this.speed;
-                } else if (direction === 'down' && this.y < canvas.height - this.height) {
-                    this.y += this.speed;
                 }
             }
 
@@ -222,8 +218,6 @@
         function handleInput() {
             if (keys['a']) player.move('left');
             if (keys['d']) player.move('right');
-            if (keys['w']) player.move('up');
-            if (keys['s']) player.move('down');
             if (keys['j']) player.shoot();
         }
 
