@@ -1,20 +1,33 @@
-<div class="container">
-  <h1>온도와 테마에 따른 코디 추천</h1>
-  <div class="inputs">
-    <label for="temperature">온도:</label>
-    <select id="temperature">
-      <option value="hot">덥다</option>
-      <option value="cold">춥다</option>
-      <option value="mild">온화하다</option>
-    </select>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>온도와 테마에 따른 코디 추천</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>온도와 테마에 따른 코디 추천</h1>
+    <div class="select-options">
+      <label for="temperature">온도:</label>
+      <select id="temperature">
+        <option value="hot">덥다</option>
+        <option value="cold">춥다</option>
+        <option value="mild">온화하다</option>
+      </select>
 
-    <label for="theme">테마:</label>
-    <select id="theme">
-      <option value="casual">캐주얼</option>
-      <option value="formal">포멀</option>
-      <option value="sporty">스포츠</option>
-    </select>
+      <label for="theme">테마:</label>
+      <select id="theme">
+        <option value="casual">캐주얼</option>
+        <option value="formal">포멀</option>
+        <option value="sporty">스포츠</option>
+      </select>
+    </div>
+    
+    <button id="startButton">시작하기!</button>
   </div>
 
-  <button id="startButton">시작하기!</button>
-</div>
+  <script src="script.js"></script>
+</body>
+</html>
